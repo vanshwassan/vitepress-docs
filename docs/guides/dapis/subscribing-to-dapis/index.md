@@ -134,8 +134,9 @@ You can now see the deployed proxy contract address. You can now use this to
 read from the configured dAPI.
 
 In order for OEV Searchers to be able to find your dApp and participate in the
-OEV auctions, you must register your dApp and all the proxies with API3
-Ecosystem. To do this, click on **Register Proxy**.
+OEV auctions, you must register your dApp and all the proxies with
+[API3 Ecosystem](https://ecosystem.api3.org/). To do this, click on **Register
+Proxy** and fill out all the details about your dApp.
 
 To get started with using dAPIs, you can follow the
 [Reading a dAPI Proxy guide](/guides/dapis/read-a-dapi/).
