@@ -4,16 +4,12 @@ module.exports = [
     collapsed: false,
     items: [
       {
-        text: 'dAPIs are data feeds',
+        text: 'How dAPIs work',
         link: '/reference/dapis/understand/',
       },
       {
-        text: 'Managed dAPIs',
-        link: '/reference/dapis/understand/managed',
-      },
-      {
-        text: 'Self-funded dAPIs',
-        link: '/reference/dapis/understand/self-funded',
+        text: 'dAPIs',
+        link: '/reference/dapis/understand/dapis',
       },
       {
         text: 'Reading dAPIs',

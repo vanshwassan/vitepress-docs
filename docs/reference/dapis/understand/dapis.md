@@ -1,9 +1,9 @@
 ---
-title: Managed dAPIs
+title: dAPIs
 sidebarHeader: Reference
 sidebarSubHeader: dAPIs
 pageHeader: Reference → dAPIs → Understanding dAPIs
-path: /reference/dapis/understand/managed.html
+path: /reference/dapis/understand/dapis.html
 outline: deep
 tags:
 ---
@@ -16,11 +16,11 @@ tags:
 
 # {{$frontmatter.title}}
 
-Managed dAPIs are sourced directly from multiple
+dAPIs are sourced directly from multiple
 [first-party](/explore/airnode/why-first-party-oracles.md) data providers
 running an [Airnode](/reference/airnode/latest/understand/) and aggregated using
-Airnode's signed data. The gas costs and availability of managed dAPIs is
-managed by the dAPI team within [API3 DAO](/explore/dao-members/).
+Airnode's signed data. The gas costs and availability of dAPIs is managed by the
+dAPI team within [API3 DAO](/explore/dao-members/).
 
 ## How it works
 
@@ -40,7 +40,7 @@ The `beaconId` for each dAPI gets updated when the price hits the set
 [deviation threshold](/reference/dapis/understand/deviations.md)/[heartbeat](/reference/dapis/understand/deviations.md#heartbeat)
 using
 [Airnode's Signed Data](/reference/airnode/latest/understand/http-gateways.md).
-[Airseeker](/reference/dapis/understand/managed.md#airseeker) and other entities
+[Airseeker](/reference/dapis/understand/dapis.md#airseeker) and other entities
 who have access to Airnode's signed data are responsible for updating each
 individual `beaconId` for each dAPI.
 
@@ -48,11 +48,16 @@ A `beaconId` for each dAPI is derived from the hash of the provider's Airnode's
 address and its Template ID(a hash of one of the Airnode's `endpointId` and
 encoded parameters).
 
-The dAPI team is running Airseekers which are primarily responsible for updating
-the `beaconId` based on the specification of the dAPI. Providers also update the
-`beaconId` at a higher deviation threshold/heartbeat as a fallback. There are
-also other entities that serve as additional fallback which operate at an even
-higher deviation threshold/heartbeat.
+The data providers are running Airseekers which are primarily responsible for
+updating the `beaconId` based on the specification of the dAPI. Providers also
+update the `beaconId` at a higher deviation threshold/heartbeat as a fallback.
+There are also other entities that serve as additional fallback which operate at
+an even higher deviation threshold/heartbeat.
+
+Apart from relying on just the Airseeker to look for price deviations,
+[searchers](/reference/dapis/understand/dapis.html#searchers) can bid for price
+updates through the [OEV Network]() to update the data feeds.
+[Click here to read more about OEV]().
 
 ## Airseeker
 
@@ -70,7 +75,21 @@ used to configure the Airseeker.
 The configuration file is used to configure the deviation thresholds and
 heartbeat for each `beaconId` or `beaconSetId`.
 
-## Providers for Managed dAPIs
+## Searchers
+
+Searchers are bots/entities that can bid for price updates for dAPIs through the
+[OEV Network](). They get the right to update the data feeds by bidding for it.
+This is a way for dApps to earn revenue by auctioning off the right to update
+the data feeds to searchers.
+
+The incentive for searchers to bid for price updates is to look for on-chain
+liquidations and trigger the update of the dAPIs once they find an opportunity.
+
+The proceeds from the OEV Network goes back to the dApp.
+
+[Click here to read more about OEV]()
+
+## Providers for dAPIs
 
 Currently, the [API3 Market](https://market.api3.org/) has 4 different asset
 classes that are listed below. For each type, there are multiple providers that
@@ -87,34 +106,46 @@ listed below:
 All the data providers listed here are selected and properly tested by the dAPI
 team to ensure the highest quality data availability for the listed dAPIs.
 
+## Chains
+
+dAPIs are available on both major EVM-compatible testnets and mainnets. The
+chains that are currently supported are listed below:
+
+| Mainnet | Testnet |
+| ------- | ------- |
+|         |         |
+|         |         |
+|         |         |
+|         |         |
+
+Head over to the [API3 Market](https://market.api3.org/) to see the list of all
+available dAPIs and their chains.
+
 ## Update Process
 
-When a user places an order for a managed service, the order will be created
-on-chain and the dAPI team will update the mapping for the dAPI to point to a
-particular `beaconSetId` with the requested deviation threshold and heartbeat.
-The update process is currently manual and will be automated in the future.
+When a user places an order for a dAPI, the order will be created on-chain and
+the mapping for the dAPI will be updated to point to the particular
+`beaconSetId` with the requested deviation threshold and heartbeat.
 
 ::: info Note
 
-The proxy contract address to read from the dAPI will remain the same.
-Purchasing a better configuration will not change the proxy contract address for
-the dAPI.
+If you have already deployed your proxy contract to read from the dAPI, it will
+remain the same. Purchasing a better configuration will not change your proxy
+contract address for the dAPI.
 
 :::
 
-With managed dAPIs, dApps can have an option to configure the dAPI's deviation
-threshold and heartbeat. For managed feeds, dApps have the following options to
-choose from based on the chain and dAPI:
+With dAPIs, dApps can have an option to configure the deviation threshold and
+heartbeat. For mainnet feeds, dApps have the following options to choose from
+based on the chain and dAPI:
 
 | Deviation | Heartbeat |
 | --------- | --------- |
-| 0.25%     | 2 minutes |
 | 0.25%     | 24 hours  |
 | 0.5%      | 24 hours  |
 | 1%        | 24 hours  |
 
-See the guide
-[Subscribing to Managed dAPIs](/guides/dapis/subscribing-managed-dapis/) and
-learn more on how to access managed dAPIs.
+See the guide [Subscribing to dAPIs](/guides/dapis/subscribing-to-dapis/) and
+learn more on how to access dAPIs.
 
 <FlexEndTag/>
