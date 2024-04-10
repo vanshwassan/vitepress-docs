@@ -36,9 +36,7 @@ commodity prices. They can power various decentralized applications such as DeFi
 lending, synthetic assets, stable coins, derivatives, NFTs, and more.
 
 dAPIs also allow dApps to earn revenue by auctioning off the right to update the
-data feeds to searchers using the [OEV Network]().
-
-To read more about OEV, [click here](/reference/dapis/understand/oev.md).
+data feeds to searchers using the OEV Network.
 
 To read more about dAPIs, [click here](/reference/dapis/understand/).
 
@@ -68,10 +66,9 @@ the dAPI that triggers an update. If a dAPI is not updated within a known amount
 of time (called the heartbeat), the dAPI update is triggered.
 
 Apart from triggering a dAPI update solely based on the deviation threshold and
-heartbeat, dApps can set up [OEV]() to auction off the right to update the data
-feeds to searchers. Searchers can bid for price updates through the
-[OEV Network]() to update the data feeds. All the OEV proceeds goes back to the
-dApp.
+heartbeat, dApps can set up OEV to auction off the right to update the data
+feeds to searchers. Searchers can bid for price updates through the OEV Network
+to update the data feeds. All the OEV proceeds goes back to the dApp.
 
 [Click here](/guides/dapis/subscribing-to-dapis/) to read more about how to get
 started with dAPIs.
@@ -145,9 +142,8 @@ grouped by asset type(s) of supplied data:
 
 Each dAPI has a [proxy contract](/reference/dapis/understand/proxy-contracts)
 that is used to read the value of the dAPI. The proxy contract is linked to a
-mapping that maps to a `beaconId` or `beaconSetId` and an
-[OEV beneficiary address](). The `beaconId` for each dAPI gets updated when the
-price hits the set
+mapping that maps to a `beaconId` or `beaconSetId` and an OEV beneficiary
+address. The `beaconId` for each dAPI gets updated when the price hits the set
 [deviation threshold](/reference/dapis/understand/deviations.md)/[heartbeat](/reference/dapis/understand/deviations.md#heartbeat)
 using
 [Airnode's Signed Data](/reference/airnode/latest/understand/http-gateways.md).

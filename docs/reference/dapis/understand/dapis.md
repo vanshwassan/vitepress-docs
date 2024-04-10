@@ -78,16 +78,16 @@ heartbeat for each `beaconId` or `beaconSetId`.
 ## Searchers
 
 Searchers are bots/entities that can bid for price updates for dAPIs through the
-[OEV Network](). They get the right to update the data feeds by bidding for it.
-This is a way for dApps to earn revenue by auctioning off the right to update
-the data feeds to searchers.
+OEV Network. They get the right to update the data feeds by bidding for it. This
+is a way for dApps to earn revenue by auctioning off the right to update the
+data feeds to searchers.
 
 The incentive for searchers to bid for price updates is to look for on-chain
 liquidations and trigger the update of the dAPIs once they find an opportunity.
 
 The proceeds from the OEV Network goes back to the dApp.
 
-[Click here to read more about OEV]()
+<!-- [Click here to read more about OEV]() -->
 
 ## Providers for dAPIs
 

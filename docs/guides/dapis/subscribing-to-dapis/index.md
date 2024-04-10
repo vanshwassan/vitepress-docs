@@ -113,15 +113,16 @@ Proxy Address** to get the proxy contract address.
 
 <img src="../../assets/images/dapi-6.png" style="width:100%"/>
 
-Before you can start reading from the dAPI, you will need to set your
-**[OEV beneficiary address]()**. This is the address that will receive the OEV
-proceeds through the [OEV Network]().
+Before you can start reading from the dAPI, you will need to set your **OEV
+beneficiary address**. This is the address that will receive the OEV proceeds
+through the OEV Network.
 
 ::: info Note
 
 The OEV beneficiary address must be an EOA or a smart contract address that can
-call the `Api3ServerV1` contract to withdraw funds to itself. Click here to read
-more about the [OEV beneficiary]().
+call the `Api3ServerV1` contract to withdraw funds to itself.
+
+<!-- Click here to read more about the [OEV beneficiary](). -->
 
 :::
 
