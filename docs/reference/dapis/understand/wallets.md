@@ -17,8 +17,7 @@ tags:
 # {{$frontmatter.title}}
 
 Funds from sponsor wallets are used to pay the gas cost when updating the
-on-chain value of a self-funded dAPI's sourced beacon value. Sponsor wallets are
-only relevant when using self-funded dAPIs.
+on-chain value of dAPIs' sourced beacon value.
 
 Self-funded dAPI sponsor wallets are important in that the community (dApp
 owners) must fund the sponsor wallets of the dAPIs they wish to use. This is

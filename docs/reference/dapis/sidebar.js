@@ -4,12 +4,8 @@ module.exports = [
     collapsed: false,
     items: [
       {
-        text: 'How dAPIs work',
-        link: '/reference/dapis/understand/',
-      },
-      {
         text: 'dAPIs',
-        link: '/reference/dapis/understand/dapis',
+        link: '/reference/dapis/understand/',
       },
       {
         text: 'Reading dAPIs',
